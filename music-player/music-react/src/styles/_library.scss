@@ -1,0 +1,14 @@
+.library{
+    position: fixed;
+    top: 0;
+    left:0;
+    width:20rem;
+    height: 100%;
+}
+.library-songs{
+    display: flex;
+    align-items: center;
+    img{
+        width: 20%;
+    }
+}
