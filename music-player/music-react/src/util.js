@@ -53,7 +53,7 @@ function chillHop() {
     },
     { //fix error here
       name: "Under the City Stars",
-      ReferenceError Path2D
+      
       cover:
         "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
       artist: "Aso, Middle School, Aviino",

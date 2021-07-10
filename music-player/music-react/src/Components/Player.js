@@ -29,8 +29,17 @@ const dragHandler =(e) => {
 }
 const skipTrackHandler = (direction) => {
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
-    if(direction === 'skip-forward'){
-        setCurrentSong(songs[currentIndex + 1])
+    if(direction === "skip-forward"){
+        setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+
+    if(direction === "skip-back"){
+        if(( currentIndex - 1) % songs.length === -1){
+            setCurrentSong(songs[songs.length - 1]);
+            return;
+        }
+        setCurrentSong(songs[(currentIndex - 1)% songs.length ]);
+    }
+
     }
 
 };
@@ -54,7 +63,7 @@ type="range"/>
     className="Play" 
     size="2x"
     icon={isPlaying ? faPause: faPlay}/>
-    <FontAwesomeIcon onClick={() => skipTrackHandler('skip-back')} className="skip-forward" size="2x" icon={faAngleRight}/>
+    <FontAwesomeIcon onClick={() => skipTrackHandler('skip-forward')} className="skip-forward" size="2x" icon={faAngleRight}/>
 
 </div>
 </div>
